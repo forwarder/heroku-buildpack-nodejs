@@ -25,6 +25,8 @@ if [ -n "$APP_DIR" ]; then
   BUILD_DIR="${BUILD_DIR}/${APP_DIR}"
 fi
 
+echo "Build dir: $BUILD_DIR"
+
 ### Load dependencies
 
 curl --silent --retry 5 --retry-max-time 15 'https://lang-common.s3.amazonaws.com/buildpack-stdlib/v7/stdlib.sh' > "$STDLIB_FILE"
