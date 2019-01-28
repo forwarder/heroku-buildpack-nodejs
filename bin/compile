@@ -22,6 +22,7 @@ BP_DIR=$(cd "$(dirname "${0:-}")"; cd ..; pwd)
 STDLIB_FILE=$(mktemp -t stdlib.XXXXX)
 
 if [ -f "${ENV_DIR}/APP_DIR" ]; then
+  APP_DIR="$(cat "${ENV_DIR}/APP_DIR")"
   BUILD_DIR="${BUILD_DIR}/${APP_DIR}"
 fi
 
