@@ -2,9 +2,8 @@
 # bin/detect <build-dir>
 
 BUILD_DIR=${1:-}
-if [ -n "$APP_DIR" ]; then
-  BUILD_DIR="${BUILD_DIR}/${APP_DIR}"
-fi
+
+echo "Detect build dir: $BUILD_DIR"
 
 error() {
   local c="2,999 s/^/ !     /"
